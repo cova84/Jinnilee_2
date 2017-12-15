@@ -16,11 +16,6 @@ class urlCell_W: UITableViewCell {
     @IBOutlet weak var urlButtonTitle: UIButton!
     @IBAction func urlButton(_ sender: UIButton) {
         
-        //        var num = Int(linkUrl)!
-        //        cellW.urlButtonTitle.tag = num
-        //
-        //var tagSt = String(tag)!
-        
         let url = URL(string: "https://life-of.net")!
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
@@ -31,13 +26,13 @@ class urlCell_W: UITableViewCell {
     super.awakeFromNib()
         
         //タグで情報を受け取る
-        print("tag受け取り\(self.tag)")
+        print("tag受け取り\(tag)")
         
         //Viewの背景、囲い線-----------------------------------------
         background?.backgroundColor = UIColor(
               red: 255/255.0
             , green: 255/255.0
-            , blue: 255/255.0
+            , blue: 5/255.0
             , alpha: 1.0
             )
 //        background?.layer.borderWidth = 2.0
@@ -55,8 +50,6 @@ class urlCell_W: UITableViewCell {
 //        //ファイルの内容を読み込んでディクショナリー型に格納
 //        let dic = NSDictionary(contentsOfFile: path!)
 //        let dic001 = dic!["self.tag"]! as! NSDictionary
-
-
     }
 
 
@@ -69,8 +62,3 @@ class urlCell_W: UITableViewCell {
     }
     
 }
-
-
-
-
-

@@ -32,6 +32,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var hotelAddress: UITextView!
     ////詳細情報-------------------------------------------------------------------------------------------------
     @IBOutlet weak var detailedInfoTableView: UITableView!
+   // @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    
     ////予約方法--------------------------------------------------------------------------------------------------
     @IBOutlet weak var reservationTabelView: UITableView!
     
@@ -89,15 +91,15 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_D_G")
         self.detailedInfoTableView.estimatedRowHeight = cellHeight
         self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
-
+        
         self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_D_W")
         self.detailedInfoTableView.estimatedRowHeight = cellHeight
         self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
-
+        
         self.reservationTabelView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_R_G")
         self.reservationTabelView.estimatedRowHeight = cellHeight
         self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-
+        
         self.reservationTabelView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W")
         self.reservationTabelView.estimatedRowHeight = cellHeight
         self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
@@ -105,7 +107,7 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         self.reservationTabelView.register(UINib(nibName: "URLCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_URL")
         self.reservationTabelView.estimatedRowHeight = cellHeight
         self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-
+        
         //ホテル名
         hotelName.text = getKeyDic["hotelName"] as! String
         //紹介コメント
@@ -125,7 +127,6 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         //imageViewスクリーンの幅を指定
         let id = getKeyDic["id"] as! Int
-        print("id:\(id)")
 
         let imageTop:UIImage = UIImage(named: "\(id)_1")!
         
@@ -221,7 +222,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         // 2.pinの座標を設定
         myPin.coordinate = coodineate
         // 3.タイトル、サブタイトルを設定（タップした時に出る、吹き出しの情報）
-        myPin.title = "\(hotelName)"
+        let myPinHotelName = getKeyDic["hotelName"] as! String
+        myPin.title = "\(myPinHotelName)"
         // 4.mapViewにPinを追加
         hotelMap.addAnnotation(myPin)
 
@@ -245,7 +247,6 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     
-    
     //TableView表示する文字列を決定（テーブルビュー２つ）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch tableView.tag {
@@ -260,6 +261,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
             case 1:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
                 cellW.varticalLabel.text = getKeyDic["accommodation"] as! String
+                self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+
                 cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
                 return cellW
             case 2:
@@ -297,8 +300,6 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 return cellW
             }
             
-        //TODO:URLはボタンに変更
-        //TODO:カスタムセルURL用を作成
         default:
             reservationTabelView.separatorColor = UIColor.white
             switch indexPath.row {
@@ -308,14 +309,10 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 return cellW
             case 1:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
-                cellW.urlButtonTitle.setTitle("\(getKeyDic["reservation"] as! String)）(（詳しくは、HPをご確認ください。）", for: .normal)
+                cellW.urlButtonTitle.setTitle("\(getKeyDic["reservation"] as! String)（詳しくは、HPよりご確認ください。）", for: .normal)
                 //セルのURLを記憶
-//                let id = getKeyDic["id"] as! String
-//                cellW.urlButtonTitle.tag = atof(id)
-              //  cellW.urlButtonTitle.tag = getKeyDic["id"] as! Int
+                //cellW.urlButtonTitle.tag = getKeyDic["id"] as! Int
                 cellW.urlButtonTitle.tag = 2222
-
-
                 return cellW
             case 2:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
@@ -339,12 +336,18 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 cellW.varticalLabel.text = "公式HP"
                 return cellW
             default:
-                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W", for: indexPath) as! detailViewCell_W
-                cellW.varticalLabel.text = getKeyDic["url"] as! String
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
+                cellW.urlButtonTitle.setTitle("\(getKeyDic["hotelName"] as! String)の公式HPはこちら", for: .normal)
+                //getKeyDic["url"] as! String
                 return cellW
             }
         }
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        tableHeight.constant = detailedInfoTableView.contentSize.height
+//    }
+
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         tableView.deselectRow(at: indexPath, animated: true)

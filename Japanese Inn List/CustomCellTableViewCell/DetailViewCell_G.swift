@@ -12,13 +12,9 @@ import UIKit
 class detailViewCell_G: UITableViewCell {
 
     @IBOutlet weak var varticalLabel: UILabel!
- 
-
     @IBOutlet weak var background: UIView!
     
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
     override func awakeFromNib() {
     super.awakeFromNib()
             

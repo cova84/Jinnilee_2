@@ -14,13 +14,10 @@ class detailViewCell_W: UITableViewCell {
     @IBOutlet weak var varticalLabel: UILabel!
     @IBOutlet weak var background: UIView!
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
+
     override func awakeFromNib() {
     super.awakeFromNib()
-        
-        print("tag受け取り\(self.tag)")
-        
+                
         //textLabelデザイン-----------------------------------------
         varticalLabel?.font = UIFont(name: "Futura", size: 12)
         varticalLabel?.textColor = UIColor.black
@@ -32,14 +29,14 @@ class detailViewCell_W: UITableViewCell {
             , blue: 255/255.0
             , alpha: 1.0
         )
-        background.layer.borderWidth = 2.0
-        background.layer.borderColor = (UIColor(
-            red: 255/255.0
-            , green: 255/255.0
-            , blue: 255/255.0
-            , alpha: 1.0
-            ) as! CGColor
-        )
+//        background.layer.borderWidth = 2.0
+//        background.layer.borderColor = (UIColor(
+//            red: 255/255.0
+//            , green: 255/255.0
+//            , blue: 255/255.0
+//            , alpha: 1.0
+//            ) as! CGColor
+//        )
     }
 
 
@@ -53,4 +50,5 @@ class detailViewCell_W: UITableViewCell {
 
 //タグで情報を受け取る
 //print(self.tag)
+
 

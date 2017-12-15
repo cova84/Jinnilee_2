@@ -18,11 +18,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-Ai-MaD">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-Ai-MaD">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-uZ-YG2">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-uZ-YG2">
                         <rect key="frame" x="8" y="4" width="272" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -30,19 +31,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Urq-Ai-MaD" secondAttribute="trailing" id="1w6-0D-It3"/>
-                    <constraint firstItem="Urq-Ai-MaD" firstAttribute="leading" secondItem="iAO-54-Did" secondAttribute="leading" id="M8I-V7-F4z"/>
                     <constraint firstItem="fkU-uZ-YG2" firstAttribute="leading" secondItem="iAO-54-Did" secondAttribute="leading" constant="8" id="Tie-1J-2n1"/>
                     <constraint firstItem="fkU-uZ-YG2" firstAttribute="top" secondItem="iAO-54-Did" secondAttribute="top" constant="4" id="Ved-n6-SmM"/>
-                    <constraint firstItem="Urq-Ai-MaD" firstAttribute="top" secondItem="iAO-54-Did" secondAttribute="top" id="ZKm-rH-TJM"/>
                     <constraint firstAttribute="trailing" secondItem="fkU-uZ-YG2" secondAttribute="trailing" constant="8" id="giN-Ha-nIL"/>
-                    <constraint firstAttribute="bottom" secondItem="Urq-Ai-MaD" secondAttribute="bottom" constant="0.5" id="j8y-SB-CVA"/>
                     <constraint firstAttribute="bottom" secondItem="fkU-uZ-YG2" secondAttribute="bottom" constant="4.5" id="m7v-vG-M0d"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="background" destination="Urq-Ai-MaD" id="sye-lJ-3nw"/>
-                <outlet property="varticalLabel" destination="fkU-uZ-YG2" id="NOt-MW-3jT"/>
+                <outlet property="background" destination="Urq-Ai-MaD" id="yp3-Uf-kDO"/>
+                <outlet property="varticalLabel" destination="fkU-uZ-YG2" id="r2d-re-YW6"/>
             </connections>
             <point key="canvasLocation" x="163" y="198"/>
         </tableViewCell>
