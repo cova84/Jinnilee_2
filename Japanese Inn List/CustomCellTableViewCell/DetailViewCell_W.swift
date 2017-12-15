@@ -1,0 +1,56 @@
+//
+//  DetailViewCell_W.swift
+//  Japanese Inn List
+//
+//  Created by 小林由知 on 2017/12/02.
+//  Copyright © 2017年 Yoshitomo Kobatashi. All rights reserved.
+//
+
+import UIKit
+//import CoreGraphics
+
+class detailViewCell_W: UITableViewCell {
+
+    @IBOutlet weak var varticalLabel: UILabel!
+    @IBOutlet weak var background: UIView!
+
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+    override func awakeFromNib() {
+    super.awakeFromNib()
+        
+        print("tag受け取り\(self.tag)")
+        
+        //textLabelデザイン-----------------------------------------
+        varticalLabel?.font = UIFont(name: "Futura", size: 12)
+        varticalLabel?.textColor = UIColor.black
+        
+        //Viewの背景、囲い線-----------------------------------------
+        background?.backgroundColor = UIColor(
+              red: 255/255.0
+            , green: 255/255.0
+            , blue: 255/255.0
+            , alpha: 1.0
+        )
+        background.layer.borderWidth = 2.0
+        background.layer.borderColor = (UIColor(
+            red: 255/255.0
+            , green: 255/255.0
+            , blue: 255/255.0
+            , alpha: 1.0
+            ) as! CGColor
+        )
+    }
+
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
+//タグで情報を受け取る
+//print(self.tag)
+
