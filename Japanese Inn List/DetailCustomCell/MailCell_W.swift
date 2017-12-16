@@ -14,6 +14,7 @@ class mailCell_W: UITableViewCell, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var buttonTitle: UIButton!
+    
     //TableViewからurlを受け取るプロパティを作る。
     var mail:String = ""
     
