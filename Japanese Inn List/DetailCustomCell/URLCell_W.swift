@@ -13,10 +13,12 @@ class urlCell_W: UITableViewCell {
 
 
     @IBOutlet weak var background: UIView!
-    @IBOutlet weak var urlButtonTitle: UIButton!
-    @IBAction func urlButton(_ sender: UIButton) {
-        
-        let url = URL(string: "https://life-of.net")!
+    @IBOutlet weak var buttonTitle: UIButton!
+    //TableViewからurlを受け取るプロパティを作る。
+    var url:String = ""
+    
+    @IBAction func button(_ sender: UIButton) {
+        let url = URL(string: self.url)!
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         }
@@ -24,17 +26,13 @@ class urlCell_W: UITableViewCell {
     
     override func awakeFromNib() {
     super.awakeFromNib()
-        
-        //タグで情報を受け取る
-        print("tag受け取り\(tag)")
-        
         //Viewの背景、囲い線-----------------------------------------
         background?.backgroundColor = UIColor(
-              red: 255/255.0
-            , green: 255/255.0
-            , blue: 5/255.0
+              red: 248/255.0
+            , green: 248/255.0
+            , blue: 248/255.0
             , alpha: 1.0
-            )
+        )
 //        background?.layer.borderWidth = 2.0
 //        background?.layer.borderColor = (UIColor(
 //            red: 255/255.0
@@ -43,17 +41,7 @@ class urlCell_W: UITableViewCell {
 //            , alpha: 1.0
 //            ) as! CGColor
 //        )
-        
-//        //plistの読み込み02--------------------------------------------------------
-//        //ファイルパスを取得（エリア名が格納されているプロパティリスト）
-//        let path = Bundle.main.path(forResource: "hotel_list_Detail", ofType: "plist")
-//        //ファイルの内容を読み込んでディクショナリー型に格納
-//        let dic = NSDictionary(contentsOfFile: path!)
-//        let dic001 = dic!["self.tag"]! as! NSDictionary
     }
-
-
-//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

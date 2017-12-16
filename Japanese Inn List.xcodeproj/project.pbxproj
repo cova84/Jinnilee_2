@@ -21,8 +21,10 @@
 		D145DFBB1FD5BB5D0037EFE0 /* MapKeyStorageMKPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145DFBA1FD5BB5D0037EFE0 /* MapKeyStorageMKPA.swift */; };
 		D16002E01FDF5E2F006A7514 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16002DE1FDF5E2F006A7514 /* Favorite+CoreDataClass.swift */; };
 		D16002E11FDF5E2F006A7514 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16002DF1FDF5E2F006A7514 /* Favorite+CoreDataProperties.swift */; };
+		D17F9F8A1FE58ED100C3E753 /* MailCell_W.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17F9F891FE58ED100C3E753 /* MailCell_W.xib */; };
 		D18F48551FC4722200535881 /* favoriteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D18F48531FC4722200535881 /* favoriteCoreData.xcdatamodeld */; };
 		D19AEF881FC731840080ACC0 /* hotel_list_Detail.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19AEF871FC731840080ACC0 /* hotel_list_Detail.plist */; };
+		D1C7C7161FE5740F00FD21AC /* MailCell_W.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7C7141FE5740F00FD21AC /* MailCell_W.swift */; };
 		D1D23C2C1FBCB426009D3895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C2B1FBCB426009D3895 /* AppDelegate.swift */; };
 		D1D23C2E1FBCB426009D3895 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C2D1FBCB426009D3895 /* FirstViewController.swift */; };
 		D1D23C301FBCB426009D3895 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C2F1FBCB426009D3895 /* SecondViewController.swift */; };
@@ -32,8 +34,7 @@
 		D1D23C5C1FBCB867009D3895 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C5B1FBCB867009D3895 /* ThirdViewController.swift */; };
 		D1D23C5E1FBCB882009D3895 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C5D1FBCB882009D3895 /* FourthViewController.swift */; };
 		D1D23C641FBCBD13009D3895 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D23C631FBCBD13009D3895 /* DetailView.swift */; };
-		D1FC791A1FE426F200D0AD6C /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1FC79181FE426F200D0AD6C /* TestCell.xib */; };
-		D1FC791B1FE426F200D0AD6C /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC79191FE426F200D0AD6C /* TestCell.swift */; };
+		D1D78CD21FE5938100E7E58A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D78CD11FE5938100E7E58A /* MessageUI.framework */; };
 		D1FE761C1FC7C471000786C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FE761B1FC7C471000786C3 /* LaunchScreen.storyboard */; };
 		D1FEAD321FCA978600E25738 /* hotel_list_Top.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1FEAD311FCA978600E25738 /* hotel_list_Top.plist */; };
 /* End PBXBuildFile section */
@@ -83,8 +84,10 @@
 		D145DFBA1FD5BB5D0037EFE0 /* MapKeyStorageMKPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKeyStorageMKPA.swift; sourceTree = "<group>"; };
 		D16002DE1FDF5E2F006A7514 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D16002DF1FDF5E2F006A7514 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D17F9F891FE58ED100C3E753 /* MailCell_W.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MailCell_W.xib; sourceTree = "<group>"; };
 		D18F48541FC4722200535881 /* favoriteCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = favoriteCoreData.xcdatamodel; sourceTree = "<group>"; };
 		D19AEF871FC731840080ACC0 /* hotel_list_Detail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotel_list_Detail.plist; sourceTree = SOURCE_ROOT; };
+		D1C7C7141FE5740F00FD21AC /* MailCell_W.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailCell_W.swift; sourceTree = "<group>"; };
 		D1D23C281FBCB426009D3895 /* Japanese Inn List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Japanese Inn List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D23C2B1FBCB426009D3895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D23C2D1FBCB426009D3895 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +103,7 @@
 		D1D23C5B1FBCB867009D3895 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		D1D23C5D1FBCB882009D3895 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		D1D23C631FBCBD13009D3895 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		D1FC79181FE426F200D0AD6C /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
-		D1FC79191FE426F200D0AD6C /* TestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		D1D78CD11FE5938100E7E58A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D1FE761B1FC7C471000786C3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1FEAD311FCA978600E25738 /* hotel_list_Top.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotel_list_Top.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D78CD21FE5938100E7E58A /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +141,7 @@
 				D1D23C411FBCB426009D3895 /* Japanese Inn ListTests */,
 				D1D23C4C1FBCB426009D3895 /* Japanese Inn ListUITests */,
 				D1D23C291FBCB426009D3895 /* Products */,
+				D1D78CD01FE5938100E7E58A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E9ACE81FCEA2D0005853C5 /* MyClass */,
-				D1D734381FD246B90092F001 /* CustomCellTableViewCell */,
+				D1D734381FD246B90092F001 /* DetailCustomCell */,
 				D1D23C2B1FBCB426009D3895 /* AppDelegate.swift */,
 				D1D23C2D1FBCB426009D3895 /* FirstViewController.swift */,
 				D1D23C2F1FBCB426009D3895 /* SecondViewController.swift */,
@@ -192,20 +196,28 @@
 			path = "Japanese Inn ListUITests";
 			sourceTree = "<group>";
 		};
-		D1D734381FD246B90092F001 /* CustomCellTableViewCell */ = {
+		D1D734381FD246B90092F001 /* DetailCustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				D1159DF51FE3537B00530826 /* customCellTableViewCell.swift */,
 				D1159DF71FE3537B00530826 /* DetailViewCell_G.swift */,
 				D1159DFC1FE3537B00530826 /* DetailViewCell_G.xib */,
 				D1159DF81FE3537B00530826 /* DetailViewCell_W.swift */,
 				D1159DF91FE3537B00530826 /* DetailViewCell_W.xib */,
 				D1159DFA1FE3537B00530826 /* URLCell_W.swift */,
 				D1159DFB1FE3537B00530826 /* URLCell_W.xib */,
-				D1FC79191FE426F200D0AD6C /* TestCell.swift */,
-				D1FC79181FE426F200D0AD6C /* TestCell.xib */,
+				D1C7C7141FE5740F00FD21AC /* MailCell_W.swift */,
+				D17F9F891FE58ED100C3E753 /* MailCell_W.xib */,
+				D1159DF51FE3537B00530826 /* customCellTableViewCell.swift */,
 			);
-			path = CustomCellTableViewCell;
+			path = DetailCustomCell;
+			sourceTree = "<group>";
+		};
+		D1D78CD01FE5938100E7E58A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1D78CD11FE5938100E7E58A /* MessageUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D1E9ACE81FCEA2D0005853C5 /* MyClass */ = {
@@ -334,7 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FC791A1FE426F200D0AD6C /* TestCell.xib in Resources */,
+				D17F9F8A1FE58ED100C3E753 /* MailCell_W.xib in Resources */,
 				D13C3BC21FE0C6A500A76A75 /* infoLink.jpg in Resources */,
 				D1159E011FE3537B00530826 /* DetailViewCell_W.xib in Resources */,
 				D19AEF881FC731840080ACC0 /* hotel_list_Detail.plist in Resources */,
@@ -474,8 +486,8 @@
 				D1159DFF1FE3537B00530826 /* DetailViewCell_G.swift in Sources */,
 				D1159E001FE3537B00530826 /* DetailViewCell_W.swift in Sources */,
 				D18F48551FC4722200535881 /* favoriteCoreData.xcdatamodeld in Sources */,
+				D1C7C7161FE5740F00FD21AC /* MailCell_W.swift in Sources */,
 				D145DFBB1FD5BB5D0037EFE0 /* MapKeyStorageMKPA.swift in Sources */,
-				D1FC791B1FE426F200D0AD6C /* TestCell.swift in Sources */,
 				D1159DFD1FE3537B00530826 /* customCellTableViewCell.swift in Sources */,
 				D1D23C2C1FBCB426009D3895 /* AppDelegate.swift in Sources */,
 				D1177A4C1FD6D775002EEEBE /* GetKeyCore.swift in Sources */,

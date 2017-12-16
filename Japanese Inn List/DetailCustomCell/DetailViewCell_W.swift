@@ -24,9 +24,9 @@ class detailViewCell_W: UITableViewCell {
         
         //Viewの背景、囲い線-----------------------------------------
         background?.backgroundColor = UIColor(
-              red: 255/255.0
-            , green: 255/255.0
-            , blue: 255/255.0
+              red: 248/255.0
+            , green: 248/255.0
+            , blue: 248/255.0
             , alpha: 1.0
         )
 //        background.layer.borderWidth = 2.0
@@ -47,8 +47,3 @@ class detailViewCell_W: UITableViewCell {
     }
     
 }
-
-//タグで情報を受け取る
-//print(self.tag)
-
-

@@ -104,8 +104,7 @@
 		<key>reservation</key>
 		<string>HP</string>
 		<key>reservation_URL</key>
-		<string>
-http://www.theonehundred.com/request.htm</string>
+		<string>http://www.theonehundred.com/request.htm</string>
 		<key>tel</key>
 		<string>日本コールセンター: 06-6850-1319
 ザ・ワンハンドレト：718-624-8313</string>
@@ -518,9 +517,9 @@ $ 165.00</string>
 		<key>rooms</key>
 		<string>1</string>
 		<key>wifi</key>
-		<string>不明</string>
+		<string>　</string>
 		<key>pickup</key>
-		<string></string>
+		<string>　</string>
 		<key>equipment</key>
 		<string>バス、トイレなど</string>
 		<key>reservation</key>
@@ -754,13 +753,13 @@ $320.00（家族割引　大人4名／子供2名：$320.00〜）</string>
 		<key>wifi</key>
 		<string>あり</string>
 		<key>pickup</key>
-		<string></string>
+		<string>　</string>
 		<key>equipment</key>
 		<string>シャワー、トイレ、キッチン、ランドリーなど</string>
 		<key>reservation</key>
 		<string>メール</string>
 		<key>reservation_URL</key>
-		<string>yumi@colis.com</string>
+		<string>http://aishahouse.com.jm/aishahouse.htm</string>
 		<key>tel</key>
 		<string>(876)844-8928　</string>
 		<key>email</key>
@@ -1080,16 +1079,15 @@ Omoa, Cortés Honduras C.A.</string>
 		<key>wifi</key>
 		<string>あり</string>
 		<key>pickup</key>
-		<string></string>
+		<string>　</string>
 		<key>equipment</key>
 		<string>シャワー、トイレ、ランドリー、駐車場など</string>
 		<key>reservation</key>
 		<string>メール</string>
 		<key>reservation_URL</key>
-		<string>
-http://www.harekapone.cl/sfm_form_2.html</string>
+		<string>http://www.harekapone.cl/sfm_form_2.html</string>
 		<key>tel</key>
-		<string></string>
+		<string>　</string>
 		<key>email</key>
 		<string>kiyoaki@harekapone.cl</string>
 		<key>url</key>

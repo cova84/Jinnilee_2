@@ -108,6 +108,10 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         self.reservationTabelView.estimatedRowHeight = cellHeight
         self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
         
+        self.reservationTabelView.register(UINib(nibName: "MailCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_Mail")
+        self.reservationTabelView.estimatedRowHeight = cellHeight
+        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+        
         //ホテル名
         hotelName.text = getKeyDic["hotelName"] as! String
         //紹介コメント
@@ -309,10 +313,9 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 return cellW
             case 1:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
-                cellW.urlButtonTitle.setTitle("\(getKeyDic["reservation"] as! String)（詳しくは、HPよりご確認ください。）", for: .normal)
-                //セルのURLを記憶
-                //cellW.urlButtonTitle.tag = getKeyDic["id"] as! Int
-                cellW.urlButtonTitle.tag = 2222
+                cellW.buttonTitle.setTitle("\(getKeyDic["reservation"] as! String)（詳しくは、HPよりご確認ください。）", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.url = getKeyDic["reservation_URL"] as! String
                 return cellW
             case 2:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
@@ -327,9 +330,15 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 cellW.varticalLabel.text = "E-Mail"
                 return cellW
             case 5:
-                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W", for: indexPath) as! detailViewCell_W
-                cellW.varticalLabel.text = getKeyDic["email"] as! String
-                cellW.textLabel?.textColor = UIColor.black
+//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
+//                cellW.buttonTitle.setTitle("\(getKeyDic["email"] as! String)", for: .normal)
+//                //セルのURLプロパティへPlistのURLを代入
+//                cellW.url = getKeyDic["email"] as! String
+                
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_Mail", for: indexPath) as! mailCell_W
+                cellW.buttonTitle.setTitle("\(getKeyDic["email"] as! String)", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.mail = getKeyDic["email"] as! String
                 return cellW
             case 6:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
@@ -337,8 +346,9 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 return cellW
             default:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
-                cellW.urlButtonTitle.setTitle("\(getKeyDic["hotelName"] as! String)の公式HPはこちら", for: .normal)
-                //getKeyDic["url"] as! String
+                cellW.buttonTitle.setTitle("\(getKeyDic["hotelName"] as! String)の公式HPはこちら", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.url = getKeyDic["url"] as! String
                 return cellW
             }
         }
