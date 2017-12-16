@@ -11,6 +11,14 @@ import MapKit
 
 class SecondViewController: UIViewController,MKMapViewDelegate {
 
+    @IBAction func hybrid(_ sender: UIButton) {
+        mapView.mapType = MKMapType.hybridFlyover
+    }
+
+    @IBAction func standard(_ sender: UIButton) {
+        mapView.mapType = MKMapType.standard
+    }
+
     @IBOutlet weak var mapView: MKMapView!
 
     //plistの配列を一時保存するメンバ変数

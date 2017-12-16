@@ -25,35 +25,6 @@ class mailCell_W: UITableViewCell, MFMailComposeViewControllerDelegate {
         UIApplication.shared.openURL(url as! URL)
     }
     
-
-    
-//        if MFMailComposeViewController.canSendMail() {
-//            let mail = MFMailComposeViewController()
-//            mail.mailComposeDelegate = self
-//            mail.setToRecipients(["\(mail)"]) // 宛先アドレス
-//            mail.setSubject("お問い合わせ") // 件名
-//            mail.setMessageBody("ここに本文が入ります。", isHTML: false) // 本文
-//            present(mail, animated: true, completion: nil)
-//        } else {
-//            print("送信できません")
-//        }
-//    }
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//        switch result {
-//        case .cancelled:
-//            print("キャンセル")
-//        case .saved:
-//            print("下書き保存")
-//        case .sent:
-//            print("送信成功")
-//        default:
-//            print("送信失敗")
-//        }
-//        dismiss(animated: true, completion: nil)
-//    }
-        
-
-
     override func awakeFromNib() {
     super.awakeFromNib()
         //Viewの背景、囲い線-----------------------------------------
@@ -63,20 +34,18 @@ class mailCell_W: UITableViewCell, MFMailComposeViewControllerDelegate {
             , blue: 248/255.0
             , alpha: 1.0
             )
-//        background?.layer.borderWidth = 2.0
-//        background?.layer.borderColor = (UIColor(
-//            red: 255/255.0
-//            , green: 255/255.0
-//            , blue: 255/255.0
-//            , alpha: 1.0
-//            ) as! CGColor
-//        )
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+        selectionStyle = .none
+        if selected {
+            backgroundColor = UIColor.white
+        } else {
+            backgroundColor = UIColor.white
+        }
     }
-
+    
 }
+

@@ -251,6 +251,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     
+     
+    
     //TableView表示する文字列を決定（テーブルビュー２つ）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch tableView.tag {
@@ -266,7 +268,6 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
                 cellW.varticalLabel.text = getKeyDic["accommodation"] as! String
                 self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-
                 cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
                 return cellW
             case 2:
@@ -363,6 +364,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView.deselectRow(at: indexPath, animated: true)
         return indexPath
     }
+    
+
 
     
     
