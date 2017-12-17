@@ -1,5 +1,5 @@
 //
-//  AreaCustomCell.swift
+//  CountryCustomCell.swift
 //  Japanese Inn List
 //
 //  Created by 小林由知 on 2017/12/02.
@@ -9,7 +9,7 @@
 import UIKit
 //import CoreGraphics
 
-class areaCustomCell: UITableViewCell {
+class countryCustomCell: UITableViewCell {
 
     @IBOutlet weak var varticalLabel: UILabel!
     @IBOutlet weak var background: UIView!
@@ -24,61 +24,61 @@ class areaCustomCell: UITableViewCell {
         print("カスタムセル内部 no.\(self.tag)")
         
         //Viewの背景-----------------------------------------
-        if tag == 1 {
+        if tag <= 199 {
             //北アメリカ
             background?.backgroundColor = UIColor(
                   red: 248/255.0
                 , green: 49/255.0
                 , blue: 98/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 2{
+        }else if tag <= 299{
             //中南米
             background?.backgroundColor = UIColor(
                   red: 246/255.0
                 , green: 49/255.0
                 , blue: 241/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 3{
+        }else if tag <= 899{
             //アジア（北〜東〜東南アジア）
             background?.backgroundColor = UIColor(
                   red: 42/255.0
                 , green: 37/255.0
                 , blue: 255/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 4{
+        }else if tag <= 1299{
             //アジア（中央〜南〜西アジア）
             background?.backgroundColor = UIColor(
                   red: 39/255.0
                 , green: 162/255.0
                 , blue: 255/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 6{
+        }else if tag <= 499{
             //アフリカ
             background?.backgroundColor = UIColor(
                   red: 16/255.0
                 , green: 107/255.0
                 , blue: 20/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 7{
+        }else if tag <= 599{
             //ヨーロッパ
             background?.backgroundColor = UIColor(
                   red: 255/255.0
                 , green: 193/255.0
                 , blue: 37/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
-        }else if tag == 8{
+        }else if tag <= 1399{
             //オーストラリア・オセアニア
             background?.backgroundColor = UIColor(
                   red: 28/255.0
                 , green: 193/255.0
                 , blue: 34/255.0
-                , alpha: 1.0
+                , alpha: 0.75
             )
         }
     }
