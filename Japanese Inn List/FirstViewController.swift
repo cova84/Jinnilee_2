@@ -42,6 +42,20 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //nibName: ""はswiftのタイトル
+        var cellHeight:CGFloat = 30.0
+        self.myTableView.register(UINib(nibName: "AreaCustomCell", bundle: nil), forCellReuseIdentifier: "TopAreaCell")
+        self.myTableView.estimatedRowHeight = cellHeight
+        self.myTableView.rowHeight = UITableViewAutomaticDimension
+        
+//        self.myTableView.register(UINib(nibName: "CountryCustomCell", bundle: nil), forCellReuseIdentifier: "TopCountryCell")
+//        self.myTableView.estimatedRowHeight = cellHeight
+//        self.myTableView.rowHeight = UITableViewAutomaticDimension
+////
+//        self.myTableView.register(UINib(nibName: "HotelCustomCell", bundle: nil), forCellReuseIdentifier: "TopHotelCell")
+//        self.myTableView.estimatedRowHeight = cellHeight
+//        self.myTableView.rowHeight = UITableViewAutomaticDimension
+        
         //動きを確認するのに必要なデータの作成
         createData()
 
@@ -54,17 +68,46 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //文字列を表示するセルの取得（セルの再利用）
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        //TODO:カテゴリーでスイッチする！！
-        //let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W", for: indexPath) as! detailedCell_W
-
-        //表示したい文字の設定
-        cell.textLabel?.text = viewData[indexPath.row].title
-        cell.tag = viewData[indexPath.row].no
+        //TODO:カテゴリーでスイッチする！！^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        //開閉状態を一旦別変数へ退避
+        let previousViewData = viewData
+        //viewData = []
+        var pNumber = 0
         
-        //文字を設定したセルを返す
-        return cell
+        switch previousViewData[pNumber].category {
+        case 0 :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopAreaCell", for: indexPath) as! areaCustomCell
+            cell.varticalLabel.text = viewData[indexPath.row].title
+            cell.tag = viewData[indexPath.row].no
+            myTableView.separatorColor = UIColor.white
+            return cell
+
+            
+        case 1 :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopAreaCell", for: indexPath) as! areaCustomCell
+            cell.varticalLabel.text = viewData[indexPath.row].title
+            cell.tag = viewData[indexPath.row].no
+            myTableView.separatorColor = UIColor.white
+            return cell
+
+
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopAreaCell", for: indexPath) as! areaCustomCell
+            cell.varticalLabel.text = viewData[indexPath.row].title
+            cell.tag = viewData[indexPath.row].no
+            myTableView.separatorColor = UIColor.white
+            return cell
+        }
+        //TODO:カテゴリーでスイッチする！！^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+//        //表示したい文字の設定
+//        cell.textLabel?.text = viewData[indexPath.row].title
+//        cell.tag = viewData[indexPath.row].no
+//
+//        //文字を設定したセルを返す
+//        return cell
     }
     
     
