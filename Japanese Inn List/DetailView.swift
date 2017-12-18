@@ -28,8 +28,9 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
     //宿情報タイトル〜住所-----------------------------------------------------------------------------------------
     @IBOutlet weak var hotelName: UILabel!
     @IBOutlet weak var hotelComment: UITextView!
-//    @IBOutlet weak var hotelMap: MKMapView!
-//    @IBOutlet weak var hotelAddress: UITextView!
+    @IBOutlet weak var hotelMap: MKMapView!
+    @IBOutlet weak var hotelAddress: UITextView!
+
 //    ////詳細情報-------------------------------------------------------------------------------------------------
 //    @IBOutlet weak var detailedInfoTableView: UITableView!
 //    @IBOutlet weak var detailedtableViewHeight: NSLayoutConstraint!
@@ -208,37 +209,37 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
         
         
         
-//        //地図---------------------------------------------------------------------
-//        let latitude = getKeyDic["latitude"] as! String
-//        let longitude = getKeyDic["longitude"] as! String
-//        //座標オブジェクト
-//        //型変換が必要。String型〜Double型へ。atof()でくくると変わる。
-//        let coodineate = CLLocationCoordinate2DMake(atof(latitude), atof(longitude))
-//        //縮尺を設定
-//        let span = MKCoordinateSpanMake(0.05, 0.05)
-//        //範囲オブジェクトを作成
-//        let region = MKCoordinateRegionMake(coodineate, span)
-//        //地図にセット
-//        hotelMap.setRegion(region,animated: true)
-//        // 1.pinオブシェクトを生成（）内は不要
-//        let myPin = MKPointAnnotation()
-//        // 2.pinの座標を設定
-//        myPin.coordinate = coodineate
-//        // 3.タイトル、サブタイトルを設定（タップした時に出る、吹き出しの情報）
-//        let myPinHotelName = getKeyDic["hotelName"] as! String
-//        myPin.title = "\(myPinHotelName)"
-//        // 4.mapViewにPinを追加
-//        hotelMap.addAnnotation(myPin)
-//
-//
-//
-//        //住所--------------------------------------------------------------------
-//        hotelAddress.text = getKeyDic["address"] as! String
-//        hotelAddress.sizeToFit() // 文字数に合わせて縦に伸びます。
-//    }
-//
-//
-//
+        //地図---------------------------------------------------------------------
+        let latitude = getKeyDic["latitude"] as! String
+        let longitude = getKeyDic["longitude"] as! String
+        //座標オブジェクト
+        //型変換が必要。String型〜Double型へ。atof()でくくると変わる。
+        let coodineate = CLLocationCoordinate2DMake(atof(latitude), atof(longitude))
+        //縮尺を設定
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        //範囲オブジェクトを作成
+        let region = MKCoordinateRegionMake(coodineate, span)
+        //地図にセット
+        hotelMap.setRegion(region,animated: true)
+        // 1.pinオブシェクトを生成（）内は不要
+        let myPin = MKPointAnnotation()
+        // 2.pinの座標を設定
+        myPin.coordinate = coodineate
+        // 3.タイトル、サブタイトルを設定（タップした時に出る、吹き出しの情報）
+        let myPinHotelName = getKeyDic["hotelName"] as! String
+        myPin.title = "\(myPinHotelName)"
+        // 4.mapViewにPinを追加
+        hotelMap.addAnnotation(myPin)
+
+
+
+        //住所--------------------------------------------------------------------
+        hotelAddress.text = getKeyDic["address"] as! String
+        hotelAddress.sizeToFit() // 文字数に合わせて縦に伸びます。
+    }
+
+
+
 //    //TableView行数の設定
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        switch tableView.tag {
@@ -376,4 +377,4 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
     }
 
 }
-}
+
