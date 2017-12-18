@@ -175,186 +175,87 @@
             <objects>
                 <viewController id="ZmF-6z-xQM" customClass="DetailView" customModule="Japanese_Inn_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5Z-Fa-SuW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYQ-yA-5aK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1551"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-M1-v2e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1951"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lK8-Zp-onP" userLabel="ViewSC">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="1531"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.57252626638667037" green="1" blue="0.30083038578495602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Hare Kapone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-4w-L04">
-                                        <rect key="frame" x="16" y="23" width="288" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="＊各アイテム間のh隙間は8pt＊横の余白16pt ＊縦横比3:4(288*216)" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-vX-DRn">
-                                        <rect key="frame" x="16" y="63" width="288" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqd-Hk-eAh">
-                                        <rect key="frame" x="16" y="111" width="288" height="204"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="ZmF-6z-xQM" id="kt1-wI-hUU"/>
-                                        </connections>
-                                    </scrollView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-y1-dDB" userLabel="ViewButton">
-                                        <rect key="frame" x="16" y="323" width="288" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-W5-7ua">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1951"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-Mx-5jf">
-                                                <rect key="frame" x="24" y="7" width="240" height="36"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Hare Kapone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="L5w-no-hGe">
+                                                <rect key="frame" x="16" y="0.0" width="288" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                                <state key="normal" title="お気に入りに追加">
-                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveFavorites:" destination="ZmF-6z-xQM" eventType="touchUpInside" id="jMg-tv-X6f"/>
-                                                </connections>
-                                            </button>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="＊各アイテム間のh隙間は8pt＊横の余白16pt ＊縦横比3:4(288*216)" translatesAutoresizingMaskIntoConstraints="NO" id="Wuz-L1-dnT">
+                                                <rect key="frame" x="16" y="40" width="288" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-ZA-fi0">
+                                                <rect key="frame" x="16" y="88" width="288" height="204"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </scrollView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtZ-3Y-etB" userLabel="ViewButton">
+                                                <rect key="frame" x="16" y="300" width="288" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-4s-ZJO">
+                                                        <rect key="frame" x="24" y="7" width="240" height="36"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                                        <state key="normal" title="お気に入りに追加">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.19215686269999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.19215686269999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1951" id="nWx-tf-CLf"/>
+                                        </constraints>
                                     </view>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-Te-Uvn">
-                                        <rect key="frame" x="16" y="381" width="288" height="180"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </mapView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tuki Haka Hevari, Hanga Roa, Easter Island, Chile" translatesAutoresizingMaskIntoConstraints="NO" id="Xza-HP-Lbp">
-                                        <rect key="frame" x="16" y="569" width="288" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-dm-x6o">
-                                        <rect key="frame" x="16" y="627" width="288" height="370"/>
-                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="370" id="VcJ-de-aGN"/>
-                                        </constraints>
-                                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■詳細情報" lineBreakMode="tailTruncation" minimumFontSize="10" id="gSQ-VI-OTi">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_G" id="f8y-XG-1N6">
-                                                <rect key="frame" x="0.0" y="71" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f8y-XG-1N6" id="yE3-Q4-2D8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_W" id="T0o-vm-Sog" customClass="ReservationCell_W" customModule="Japanese_Inn_List" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="101" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T0o-vm-Sog" id="NEe-CK-c2q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="ZmF-6z-xQM" id="UHx-cS-YjB"/>
-                                            <outlet property="delegate" destination="ZmF-6z-xQM" id="4h8-25-L75"/>
-                                        </connections>
-                                    </tableView>
-                                    <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O9C-xt-FO7">
-                                        <rect key="frame" x="16" y="1220" width="288" height="280"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="280" id="poQ-9V-Jxc"/>
-                                        </constraints>
-                                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■予約方法" lineBreakMode="tailTruncation" minimumFontSize="10" id="HMW-Zb-CiF">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_G" id="NFi-Gp-9Rv">
-                                                <rect key="frame" x="0.0" y="71" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NFi-Gp-9Rv" id="Mhe-JA-ToU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W" id="JSF-PF-FsD">
-                                                <rect key="frame" x="0.0" y="101" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JSF-PF-FsD" id="hv1-bc-mqC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_URL" id="aEw-oy-Y6g">
-                                                <rect key="frame" x="0.0" y="131" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aEw-oy-Y6g" id="bwB-Ns-Dpd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_Mail" id="UPo-vg-ZBS">
-                                                <rect key="frame" x="0.0" y="161" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UPo-vg-ZBS" id="RZ4-ka-ZPm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="ZmF-6z-xQM" id="RGh-Qo-3r2"/>
-                                            <outlet property="delegate" destination="ZmF-6z-xQM" id="HI2-qz-7Rc"/>
-                                        </connections>
-                                    </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="uTS-W5-7ua" firstAttribute="leading" secondItem="tLx-M1-v2e" secondAttribute="leading" id="ByC-rt-ADG"/>
+                                    <constraint firstAttribute="bottom" secondItem="uTS-W5-7ua" secondAttribute="bottom" id="Laq-67-4Be"/>
+                                    <constraint firstItem="uTS-W5-7ua" firstAttribute="top" secondItem="tLx-M1-v2e" secondAttribute="top" id="OJN-cE-x55"/>
+                                    <constraint firstAttribute="trailing" secondItem="uTS-W5-7ua" secondAttribute="trailing" id="ps0-vh-FiQ"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tLx-M1-v2e" firstAttribute="bottom" secondItem="1Tf-4F-5Tu" secondAttribute="bottom" id="1mp-AR-fYE"/>
+                            <constraint firstItem="tLx-M1-v2e" firstAttribute="trailing" secondItem="1Tf-4F-5Tu" secondAttribute="trailing" id="62u-PM-WaZ"/>
+                            <constraint firstItem="tLx-M1-v2e" firstAttribute="top" secondItem="e5Z-Fa-SuW" secondAttribute="top" id="V0d-LR-hlH"/>
+                            <constraint firstItem="tLx-M1-v2e" firstAttribute="leading" secondItem="1Tf-4F-5Tu" secondAttribute="leading" id="fXp-r3-agz"/>
+                            <constraint firstItem="uTS-W5-7ua" firstAttribute="width" secondItem="e5Z-Fa-SuW" secondAttribute="width" id="oog-fS-dbF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1Tf-4F-5Tu"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="qmR-B3-eiL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="320" height="1600"/>
+                    <size key="freeformSize" width="320" height="2000"/>
                     <connections>
-                        <outlet property="detailedInfoTableView" destination="p7X-dm-x6o" id="My8-j2-dqC"/>
-                        <outlet property="detailedtableViewHeight" destination="VcJ-de-aGN" id="xHs-W8-8hr"/>
-                        <outlet property="ditailScrollView" destination="fYQ-yA-5aK" id="Ftm-7a-Ae6"/>
-                        <outlet property="hotelAddress" destination="Xza-HP-Lbp" id="po0-Wm-f58"/>
-                        <outlet property="hotelComment" destination="gFQ-vX-DRn" id="dnR-Hr-adw"/>
-                        <outlet property="hotelImageScrollView" destination="nqd-Hk-eAh" id="xIE-xk-ZBA"/>
-                        <outlet property="hotelMap" destination="hf3-Te-Uvn" id="aQd-wM-57J"/>
-                        <outlet property="hotelName" destination="DGg-4w-L04" id="lJh-ql-5gU"/>
-                        <outlet property="reservationTabelView" destination="O9C-xt-FO7" id="HU7-8L-Sna"/>
-                        <outlet property="reservationtableViewHeight" destination="poQ-9V-Jxc" id="LyQ-v4-Di3"/>
+                        <outlet property="ditailScrollView" destination="tLx-M1-v2e" id="nB9-eY-5jz"/>
+                        <outlet property="hotelComment" destination="Wuz-L1-dnT" id="MnQ-xM-TFv"/>
+                        <outlet property="hotelImageScrollView" destination="B2m-ZA-fi0" id="cdB-Ag-qXq"/>
+                        <outlet property="hotelName" destination="L5w-no-hGe" id="Raq-aY-fiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIh-gu-dnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367.5" y="3304.2253521126763"/>
+            <point key="canvasLocation" x="371.25" y="3514.4366197183099"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="JYZ-gW-6WN">
@@ -547,69 +448,154 @@
             <objects>
                 <viewController id="BQO-QX-fg7" customClass="sampleViewController" customModule="Japanese_Inn_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5hv-a9-XTo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CHS-ER-tPg">
-                                <rect key="frame" x="40" y="97" width="240" height="128"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Hare Kapone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="CVZ-Ix-nJU">
+                                <rect key="frame" x="16" y="20" width="288" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="＊各アイテム間のh隙間は8pt＊横の余白16pt ＊縦横比3:4(288*216)" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-Nr-1OE">
+                                <rect key="frame" x="16" y="91" width="288" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellko" id="kYW-tO-eyx">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYW-tO-eyx" id="E0N-lC-1kY">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eBa-4C-e9W">
-                                <rect key="frame" x="40" y="436" width="240" height="128"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNN-jc-b1G">
+                                <rect key="frame" x="16" y="186" width="288" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellko" id="fur-Hy-YG6">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fur-Hy-YG6" id="bq7-gE-6r3">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYR-c9-wEt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPo-ng-tA3">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
-                                        <color key="backgroundColor" red="0.57252626640000004" green="1" blue="0.30083038579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="UPo-ng-tA3" firstAttribute="leading" secondItem="IYR-c9-wEt" secondAttribute="leading" id="Qk9-rx-Be1"/>
-                                    <constraint firstAttribute="bottom" secondItem="UPo-ng-tA3" secondAttribute="bottom" id="jMa-yA-WyT"/>
-                                    <constraint firstItem="UPo-ng-tA3" firstAttribute="top" secondItem="IYR-c9-wEt" secondAttribute="top" id="nb7-Wd-DVF"/>
-                                    <constraint firstAttribute="trailing" secondItem="UPo-ng-tA3" secondAttribute="trailing" id="xWf-yU-93W"/>
-                                </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-7f-JfW" userLabel="ViewButton">
+                                <rect key="frame" x="16" y="423" width="288" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZE-NT-fdY">
+                                        <rect key="frame" x="24" y="7" width="240" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                        <state key="normal" title="お気に入りに追加">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveFavorites:" destination="ZmF-6z-xQM" eventType="touchUpInside" id="rvS-EG-Dr1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.19215686269999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tuki Haka Hevari, Hanga Roa, Easter Island, Chile" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-ru-J7K">
+                                <rect key="frame" x="16" y="729" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1PK-nT-dFL">
+                                <rect key="frame" x="16" y="793" width="288" height="370"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="Rch-ab-mt8"/>
+                                </constraints>
+                                <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■詳細情報" lineBreakMode="tailTruncation" minimumFontSize="10" id="TJs-fa-Fzf">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_G" id="dsL-Wm-nKK">
+                                        <rect key="frame" x="0.0" y="71" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dsL-Wm-nKK" id="pHm-Wb-Tka">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_W" id="B25-b3-PDD" customClass="ReservationCell_W" customModule="Japanese_Inn_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="101" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B25-b3-PDD" id="r3s-Cd-X3C">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZmF-6z-xQM" id="YF6-3C-ico"/>
+                                    <outlet property="delegate" destination="ZmF-6z-xQM" id="esg-a7-bDf"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="299-p6-4YH">
+                                <rect key="frame" x="16" y="1215" width="288" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="MYw-6K-UYQ"/>
+                                </constraints>
+                                <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■予約方法" lineBreakMode="tailTruncation" minimumFontSize="10" id="hlY-P6-9VD">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_G" id="rnt-bj-c0Y">
+                                        <rect key="frame" x="0.0" y="71" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rnt-bj-c0Y" id="DWg-SL-HJ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W" id="xaI-v6-3zI">
+                                        <rect key="frame" x="0.0" y="101" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xaI-v6-3zI" id="2cF-WW-FHQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_URL" id="plq-IZ-7XV">
+                                        <rect key="frame" x="0.0" y="131" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="plq-IZ-7XV" id="zhj-sy-vfY">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_Mail" id="8YB-Lb-due">
+                                        <rect key="frame" x="0.0" y="161" width="288" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8YB-Lb-due" id="Wc2-aq-CKU">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-wX-Wge">
+                                <rect key="frame" x="16" y="512" width="288" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.18917153270000001" blue="0.94895732909999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="IYR-c9-wEt" firstAttribute="top" secondItem="5hv-a9-XTo" secondAttribute="top" id="E4y-sk-chZ"/>
-                            <constraint firstItem="IYR-c9-wEt" firstAttribute="bottom" secondItem="XZv-JY-HC0" secondAttribute="bottom" id="fSQ-gL-Vp7"/>
-                            <constraint firstItem="IYR-c9-wEt" firstAttribute="leading" secondItem="XZv-JY-HC0" secondAttribute="leading" id="htd-yn-5Bh"/>
-                            <constraint firstItem="IYR-c9-wEt" firstAttribute="trailing" secondItem="XZv-JY-HC0" secondAttribute="trailing" id="roz-cg-O24"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XZv-JY-HC0"/>
                     </view>
-                    <size key="freeformSize" width="320" height="1000"/>
+                    <size key="freeformSize" width="320" height="1600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwv-Xs-igD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389.375" y="2986.2676056338028"/>
+            <point key="canvasLocation" x="1399" y="3304"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -693,6 +679,6 @@
         <image name="mapTab" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PXc-en-p7H"/>
+        <segue reference="XYR-JA-nq2"/>
     </inferredMetricsTieBreakers>
 </document>
