@@ -214,9 +214,6 @@
                                                         <state key="normal" title="お気に入りに追加">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="saveFavorites:" destination="ZmF-6z-xQM" eventType="touchUpInside" id="0oS-ml-d46"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97254901959999995" green="0.19215686269999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,10 +229,108 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="epY-7h-TBJ">
+                                                <rect key="frame" x="16" y="584" width="288" height="366"/>
+                                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="366" id="mzc-Yc-oQG"/>
+                                                </constraints>
+                                                <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■詳細情報" lineBreakMode="tailTruncation" minimumFontSize="10" id="XND-aQ-RcC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_G" id="yua-Sd-Y5M">
+                                                        <rect key="frame" x="0.0" y="71" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yua-Sd-Y5M" id="wWQ-qj-LOn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_D_W" id="L62-Vp-3tr" customClass="ReservationCell_W" customModule="Japanese_Inn_List" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="101" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L62-Vp-3tr" id="E1O-mT-ibY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ZmF-6z-xQM" id="QXI-jG-myG"/>
+                                                    <outlet property="delegate" destination="ZmF-6z-xQM" id="eJq-yn-J6H"/>
+                                                </connections>
+                                            </tableView>
+                                            <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-eG-gsK">
+                                                <rect key="frame" x="16" y="958" width="288" height="280"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" id="QdQ-Ym-fo5"/>
+                                                </constraints>
+                                                <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="■予約方法" lineBreakMode="tailTruncation" minimumFontSize="10" id="Gnu-si-72E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_G" id="p1M-tW-jQP">
+                                                        <rect key="frame" x="0.0" y="71" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p1M-tW-jQP" id="fji-zk-wVz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W" id="W64-Tp-J9u">
+                                                        <rect key="frame" x="0.0" y="101" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W64-Tp-J9u" id="wDw-ni-Ogg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_URL" id="HSd-Pu-EnF">
+                                                        <rect key="frame" x="0.0" y="131" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HSd-Pu-EnF" id="MtW-AX-Xvp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTB_R_W_Mail" id="GEX-CU-vZW">
+                                                        <rect key="frame" x="0.0" y="161" width="288" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GEX-CU-vZW" id="I37-dg-Rvx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="29.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ZmF-6z-xQM" id="hyM-mE-ilX"/>
+                                                    <outlet property="delegate" destination="ZmF-6z-xQM" id="iXK-eZ-HOU"/>
+                                                </connections>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="epY-7h-TBJ" secondAttribute="trailing" constant="16" id="2b0-1e-R2U"/>
+                                            <constraint firstItem="9ua-eG-gsK" firstAttribute="top" secondItem="epY-7h-TBJ" secondAttribute="bottom" constant="8" id="4tv-6t-onB"/>
+                                            <constraint firstAttribute="trailing" secondItem="9ua-eG-gsK" secondAttribute="trailing" constant="16" id="I2V-5d-PlZ"/>
+                                            <constraint firstItem="epY-7h-TBJ" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="OqT-G3-ML5"/>
+                                            <constraint firstItem="9ua-eG-gsK" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="nHb-Ov-g1k"/>
                                             <constraint firstAttribute="height" constant="1951" id="nWx-tf-CLf"/>
+                                            <constraint firstItem="epY-7h-TBJ" firstAttribute="top" secondItem="uTS-W5-7ua" secondAttribute="top" constant="584" id="vgC-rU-jSe"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -261,12 +356,16 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="2000"/>
                     <connections>
+                        <outlet property="detailedInfoTableView" destination="epY-7h-TBJ" id="GLq-ub-JHn"/>
+                        <outlet property="detailedtableViewHeight" destination="mzc-Yc-oQG" id="kVC-vM-uyY"/>
                         <outlet property="ditailScrollView" destination="tLx-M1-v2e" id="nB9-eY-5jz"/>
                         <outlet property="hotelAddress" destination="Ndd-ug-duP" id="87z-OV-6A1"/>
                         <outlet property="hotelComment" destination="Wuz-L1-dnT" id="MnQ-xM-TFv"/>
                         <outlet property="hotelImageScrollView" destination="B2m-ZA-fi0" id="cdB-Ag-qXq"/>
                         <outlet property="hotelMap" destination="Cvj-b5-dSU" id="JxZ-Yc-ofk"/>
                         <outlet property="hotelName" destination="L5w-no-hGe" id="Raq-aY-fiJ"/>
+                        <outlet property="reservationTabelView" destination="9ua-eG-gsK" id="MkF-ee-F2y"/>
+                        <outlet property="reservationtableViewHeight" destination="QdQ-Ym-fo5" id="kKq-xm-imL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIh-gu-dnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -544,10 +643,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ZmF-6z-xQM" id="YF6-3C-ico"/>
-                                    <outlet property="delegate" destination="ZmF-6z-xQM" id="esg-a7-bDf"/>
-                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="299-p6-4YH">
                                 <rect key="frame" x="16" y="1215" width="288" height="280"/>

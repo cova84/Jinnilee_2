@@ -31,14 +31,13 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var hotelMap: MKMapView!
     @IBOutlet weak var hotelAddress: UITextView!
 
-//    ////詳細情報-------------------------------------------------------------------------------------------------
-//    @IBOutlet weak var detailedInfoTableView: UITableView!
-//    @IBOutlet weak var detailedtableViewHeight: NSLayoutConstraint!
-//
-//    ////予約方法--------------------------------------------------------------------------------------------------
-//    @IBOutlet weak var reservationTabelView: UITableView!
-//    @IBOutlet weak var reservationtableViewHeight: NSLayoutConstraint!
+    ////詳細情報-------------------------------------------------------------------------------------------------
+    @IBOutlet weak var detailedInfoTableView: UITableView!
+    @IBOutlet weak var detailedtableViewHeight: NSLayoutConstraint!
     
+    ////予約方法--------------------------------------------------------------------------------------------------
+    @IBOutlet weak var reservationTabelView: UITableView!
+    @IBOutlet weak var reservationtableViewHeight: NSLayoutConstraint!
     
     //UIScrollView 横スクロールで表示
     @IBOutlet weak var hotelImageScrollView: UIScrollView!
@@ -86,32 +85,32 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        //nibName: ""はswiftのタイトル
-//        var cellHeight:CGFloat = 30.0
-//        self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_D_G")
-//        self.detailedInfoTableView.estimatedRowHeight = cellHeight
-//        self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
-//
-//        self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_D_W")
-//        self.detailedInfoTableView.estimatedRowHeight = cellHeight
-//        self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
-//
-//        self.reservationTabelView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_R_G")
-//        self.reservationTabelView.estimatedRowHeight = cellHeight
-//        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-//
-//        self.reservationTabelView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W")
-//        self.reservationTabelView.estimatedRowHeight = cellHeight
-//        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-//
-//        self.reservationTabelView.register(UINib(nibName: "URLCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_URL")
-//        self.reservationTabelView.estimatedRowHeight = cellHeight
-//        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-//
-//        self.reservationTabelView.register(UINib(nibName: "MailCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_Mail")
-//        self.reservationTabelView.estimatedRowHeight = cellHeight
-//        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-//
+        //nibName: ""はswiftのタイトル
+        var cellHeight:CGFloat = 30.0
+        self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_D_G")
+        self.detailedInfoTableView.estimatedRowHeight = cellHeight
+        self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
+
+        self.detailedInfoTableView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_D_W")
+        self.detailedInfoTableView.estimatedRowHeight = cellHeight
+        self.detailedInfoTableView.rowHeight = UITableViewAutomaticDimension
+
+        self.reservationTabelView.register(UINib(nibName: "DetailViewCell_G", bundle: nil), forCellReuseIdentifier: "CellTB_R_G")
+        self.reservationTabelView.estimatedRowHeight = cellHeight
+        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+
+        self.reservationTabelView.register(UINib(nibName: "DetailViewCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W")
+        self.reservationTabelView.estimatedRowHeight = cellHeight
+        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+
+        self.reservationTabelView.register(UINib(nibName: "URLCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_URL")
+        self.reservationTabelView.estimatedRowHeight = cellHeight
+        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+
+        self.reservationTabelView.register(UINib(nibName: "MailCell_W", bundle: nil), forCellReuseIdentifier: "CellTB_R_W_Mail")
+        self.reservationTabelView.estimatedRowHeight = cellHeight
+        self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+
         //ホテル名
         hotelName.text = getKeyDic["hotelName"] as! String
         //紹介コメント
@@ -240,135 +239,130 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
 
 
 
-//    //TableView行数の設定
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        switch tableView.tag {
-//        case 1:
-//            return 10
-//        default:
-//            return 8
-//        }
-//    }
-//
-//
-//
-//
-//    //TableView表示する文字列を決定（テーブルビュー２つ）
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch tableView.tag {
-//        case 1:
-//            detailedInfoTableView.separatorColor = UIColor.white
-//            switch indexPath.row {
-//            case 0:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "宿泊費（詳細情報はHPからご確認ください。）"
-//                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
-//                return cellW
-//            case 1:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = getKeyDic["accommodation"] as! String
-//                self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
-//                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
-//                return cellW
-//            case 2:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "部屋数"
-//                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
-//                return cellW
-//            case 3:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = "全\(getKeyDic["rooms"] as! String)部屋"
-//                return cellW
-//            case 4:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "Wi-Fi"
-//                return cellW
-//            case 5:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = getKeyDic["wifi"] as! String
-//                return cellW
-//            case 6:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "送迎"
-//                return cellW
-//            case 7:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = getKeyDic["pickup"] as! String
-//                return cellW
-//            case 8:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "施設設備"
-//                return cellW
-//            default:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = getKeyDic["equipment"] as! String
-//                return cellW
-//            }
-//
-//        default:
-//            reservationTabelView.separatorColor = UIColor.white
-//            switch indexPath.row {
-//            case 0:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "予約方法"
-//                return cellW
-//            case 1:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
-//                cellW.buttonTitle.setTitle("\(getKeyDic["reservation"] as! String)（詳しくは、HPよりご確認ください。）", for: .normal)
-//                //セルのURLプロパティへPlistのURLを代入
-//                cellW.url = getKeyDic["reservation_URL"] as! String
-//                return cellW
-//            case 2:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "TEL"
-//                return cellW
-//            case 3:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W", for: indexPath) as! detailViewCell_W
-//                cellW.varticalLabel.text = getKeyDic["tel"] as! String
-//                return cellW
-//            case 4:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "E-Mail"
-//                return cellW
-//            case 5:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_Mail", for: indexPath) as! mailCell_W
-//                cellW.buttonTitle.setTitle("\(getKeyDic["email"] as! String)", for: .normal)
-//                //セルのURLプロパティへPlistのURLを代入
-//                cellW.mail = getKeyDic["email"] as! String
-//                return cellW
-//            case 6:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
-//                cellW.varticalLabel.text = "公式HP"
-//                return cellW
-//            default:
-//                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
-//                cellW.buttonTitle.setTitle("\(getKeyDic["hotelName"] as! String)の公式HPはこちら", for: .normal)
-//                //セルのURLプロパティへPlistのURLを代入
-//                cellW.url = getKeyDic["url"] as! String
-//                return cellW
-//            }
-//        }
-//    }
-//
-//    override func updateViewConstraints() {
-//        setMyConstraint()
-//        super.updateViewConstraints()
-//    }
-//
-//    //TableViewの内容に合わせて、長さが伸びる。
-//    func setMyConstraint() {
-//        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight + 2*10
-//        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
-//    }
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        setMyConstraint()
-//    }
+    //TableView行数の設定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch tableView.tag {
+        case 1:
+            return 10
+        default:
+            return 8
+        }
+    }
 
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        tableHeight.constant = detailedInfoTableView.contentSize.height
-//    }
+
+
+
+    //TableView表示する文字列を決定（テーブルビュー２つ）
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch tableView.tag {
+        case 1:
+            detailedInfoTableView.separatorColor = UIColor.white
+            switch indexPath.row {
+            case 0:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "宿泊費（詳細情報はHPからご確認ください。）"
+                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
+                return cellW
+            case 1:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = getKeyDic["accommodation"] as! String
+                self.reservationTabelView.rowHeight = UITableViewAutomaticDimension
+                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
+                return cellW
+            case 2:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "部屋数"
+                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
+                return cellW
+            case 3:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = "全\(getKeyDic["rooms"] as! String)部屋"
+                return cellW
+            case 4:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "Wi-Fi"
+                return cellW
+            case 5:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = getKeyDic["wifi"] as! String
+                return cellW
+            case 6:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "送迎"
+                return cellW
+            case 7:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = getKeyDic["pickup"] as! String
+                return cellW
+            case 8:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "施設設備"
+                return cellW
+            default:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = getKeyDic["equipment"] as! String
+                return cellW
+            }
+
+        default:
+            reservationTabelView.separatorColor = UIColor.white
+            switch indexPath.row {
+            case 0:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "予約方法"
+                return cellW
+            case 1:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
+                cellW.buttonTitle.setTitle("\(getKeyDic["reservation"] as! String)（詳しくは、HPよりご確認ください。）", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.url = getKeyDic["reservation_URL"] as! String
+                return cellW
+            case 2:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "TEL"
+                return cellW
+            case 3:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W", for: indexPath) as! detailViewCell_W
+                cellW.varticalLabel.text = getKeyDic["tel"] as! String
+                return cellW
+            case 4:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "E-Mail"
+                return cellW
+            case 5:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_Mail", for: indexPath) as! mailCell_W
+                cellW.buttonTitle.setTitle("\(getKeyDic["email"] as! String)", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.mail = getKeyDic["email"] as! String
+                return cellW
+            case 6:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_G", for: indexPath) as! detailViewCell_G
+                cellW.varticalLabel.text = "公式HP"
+                return cellW
+            default:
+                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_R_W_URL", for: indexPath) as! urlCell_W
+                cellW.buttonTitle.setTitle("\(getKeyDic["hotelName"] as! String)の公式HPはこちら", for: .normal)
+                //セルのURLプロパティへPlistのURLを代入
+                cellW.url = getKeyDic["url"] as! String
+                return cellW
+            }
+        }
+    }
+
+    override func updateViewConstraints() {
+        setMyConstraint()
+        super.updateViewConstraints()
+    }
+
+    //TableViewの内容に合わせて、長さが伸びる。
+    func setMyConstraint() {
+        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight + 2*10
+        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        setMyConstraint()
+    }
 
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
