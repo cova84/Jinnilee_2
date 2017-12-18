@@ -32,11 +32,11 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var hotelAddress: UITextView!
     ////詳細情報-------------------------------------------------------------------------------------------------
     @IBOutlet weak var detailedInfoTableView: UITableView!
-   // @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var detailedtableViewHeight: NSLayoutConstraint!
     
     ////予約方法--------------------------------------------------------------------------------------------------
     @IBOutlet weak var reservationTabelView: UITableView!
-    
+    @IBOutlet weak var reservationtableViewHeight: NSLayoutConstraint!
     
     
     //UIScrollView 横スクロールで表示
@@ -354,6 +354,22 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
             }
         }
     }
+    
+    override func updateViewConstraints() {
+        setMyConstraint()
+        super.updateViewConstraints()
+    }
+    
+    //TableViewの内容に合わせて、長さが伸びる。
+    func setMyConstraint() {
+        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight + 2*10
+        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setMyConstraint()
+    }
+
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        tableHeight.constant = detailedInfoTableView.contentSize.height

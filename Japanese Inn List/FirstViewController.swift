@@ -51,14 +51,14 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.myTableView.register(UINib(nibName: "CountryCustomCell", bundle: nil), forCellReuseIdentifier: "TopCountryCell")
         self.myTableView.estimatedRowHeight = cellHeight
         self.myTableView.rowHeight = UITableViewAutomaticDimension
-
+        
         self.myTableView.register(UINib(nibName: "HotelCustomCell", bundle: nil), forCellReuseIdentifier: "TopHotelCell")
         self.myTableView.estimatedRowHeight = cellHeight
         self.myTableView.rowHeight = UITableViewAutomaticDimension
         
         //動きを確認するのに必要なデータの作成
         createData()
-
+        
     }
     
     
@@ -69,11 +69,11 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //文字列を表示するセルの取得（セルの再利用）
         //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
+        
         //pNumberでスイッチ。Noを受け取り色分けする？^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         //開閉状態を一旦別変数へ退避
         let previousViewData = viewData
-        var pNumber = 0
+        var pNumber = indexPath.row
         
         switch previousViewData[pNumber].category {
         case 1 :
@@ -81,32 +81,237 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             cell.varticalLabel.text = viewData[indexPath.row].title
             cell.tag = viewData[indexPath.row].no
             myTableView.separatorColor = UIColor.white
+            
+            //北アメリカ
+            if cell.tag == 1 {
+                cell.background?.backgroundColor = UIColor(
+                    red: 248/255.0
+                    , green: 49/255.0
+                    , blue: 98/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //中南米
+            if cell.tag == 2{
+                cell.background?.backgroundColor = UIColor(
+                    red: 246/255.0
+                    , green: 49/255.0
+                    , blue: 241/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //アジア（北〜東〜東南アジア）
+            if cell.tag == 3{
+                cell.background?.backgroundColor = UIColor(
+                    red: 42/255.0
+                    , green: 37/255.0
+                    , blue: 255/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //アジア（中央〜南〜西アジア）
+            if cell.tag == 4{
+                cell.background?.backgroundColor = UIColor(
+                    red: 39/255.0
+                    , green: 162/255.0
+                    , blue: 255/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //ヨーロッパ
+            if cell.tag == 6{
+                cell.background?.backgroundColor = UIColor(
+                    red: 255/255.0
+                    , green: 193/255.0
+                    , blue: 37/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //アフリカ
+            if cell.tag == 7{
+                cell.background?.backgroundColor = UIColor(
+                    red: 16/255.0
+                    , green: 107/255.0
+                    , blue: 20/255.0
+                    , alpha: 1.0
+                )
+            }
+            
+            //オーストラリア・オセアニア
+            if cell.tag == 8{
+                cell.background?.backgroundColor = UIColor(
+                    red: 28/255.0
+                    , green: 193/255.0
+                    , blue: 34/255.0
+                    , alpha: 1.0
+                )
+            }
+            
             return cell
-
+            
             
         case 2 :
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopCountryCell", for: indexPath) as! countryCustomCell
             cell.varticalLabel.text = viewData[indexPath.row].title
             cell.tag = viewData[indexPath.row].no
             myTableView.separatorColor = UIColor.white
+            
+            //北アメリカ
+            if viewData[indexPath.row].no >= 0 && viewData[indexPath.row].no < 200{
+                cell.background?.backgroundColor = UIColor(
+                    red: 248/255.0
+                    , green: 49/255.0
+                    , blue: 98/255.0
+                    , alpha: 0.75
+                )
+            }
+            
+            //中南米
+            if viewData[indexPath.row].no >= 200 && viewData[indexPath.row].no < 300{
+                cell.background?.backgroundColor = UIColor(
+                    red: 246/255.0
+                    , green: 49/255.0
+                    , blue: 241/255.0
+                    , alpha: 0.75
+                )
+            }
+            
+            //アジア（北〜東〜東南アジア）
+            if viewData[indexPath.row].no >= 600 && viewData[indexPath.row].no < 900{
+                cell.background?.backgroundColor = UIColor(
+                    red: 42/255.0
+                    , green: 37/255.0
+                    , blue: 255/255.0
+                    , alpha: 0.75
+                )
+            }
+            //アジア（中央〜南〜西アジア）
+            if viewData[indexPath.row].no >= 900 && viewData[indexPath.row].no < 1300{
+                cell.background?.backgroundColor = UIColor(
+                    red: 39/255.0
+                    , green: 162/255.0
+                    , blue: 255/255.0
+                    , alpha: 0.75
+                )
+            }
+            
+            //ヨーロッパ
+            if viewData[indexPath.row].no >= 300 && viewData[indexPath.row].no < 500{
+                cell.background?.backgroundColor = UIColor(
+                    red: 255/255.0
+                    , green: 193/255.0
+                    , blue: 37/255.0
+                    , alpha: 0.75
+                )
+            }
+            
+            //アフリカ
+            if viewData[indexPath.row].no >= 500 && viewData[indexPath.row].no < 600{
+                cell.background?.backgroundColor = UIColor(
+                    red: 16/255.0
+                    , green: 107/255.0
+                    , blue: 20/255.0
+                    , alpha: 0.75
+                )
+            }
+            
+            //オーストラリア・オセアニア
+            if viewData[indexPath.row].no >= 1300 && viewData[indexPath.row].no < 1400{
+                cell.background?.backgroundColor = UIColor(
+                    red: 28/255.0
+                    , green: 193/255.0
+                    , blue: 34/255.0
+                    , alpha: 0.75
+                )
+            }
+            
             return cell
-
-
+            
+            
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopHotelCell", for: indexPath) as! hotelCustomCell
             cell.varticalLabel.text = viewData[indexPath.row].title
             cell.tag = viewData[indexPath.row].no
             myTableView.separatorColor = UIColor.white
+            
+            
+            //北アメリカ
+            if viewData[indexPath.row].no >= 0 && viewData[indexPath.row].no < 200{
+                cell.background?.backgroundColor = UIColor(
+                    red: 248/255.0
+                    , green: 49/255.0
+                    , blue: 98/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //中南米
+            if viewData[indexPath.row].no >= 200 && viewData[indexPath.row].no < 300{
+                cell.background?.backgroundColor = UIColor(
+                    red: 246/255.0
+                    , green: 49/255.0
+                    , blue: 241/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //アジア（北〜東〜東南アジア）
+            if viewData[indexPath.row].no >= 600 && viewData[indexPath.row].no < 900{
+                cell.background?.backgroundColor = UIColor(
+                    red: 42/255.0
+                    , green: 37/255.0
+                    , blue: 255/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //アジア（中央〜南〜西アジア）
+            if viewData[indexPath.row].no >= 900 && viewData[indexPath.row].no < 1300{
+                cell.background?.backgroundColor = UIColor(
+                    red: 39/255.0
+                    , green: 162/255.0
+                    , blue: 255/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //ヨーロッパ
+            if viewData[indexPath.row].no >= 300 && viewData[indexPath.row].no < 500{
+                cell.background?.backgroundColor = UIColor(
+                    red: 255/255.0
+                    , green: 193/255.0
+                    , blue: 37/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //アフリカ
+            if viewData[indexPath.row].no >= 500 && viewData[indexPath.row].no < 600{
+                cell.background?.backgroundColor = UIColor(
+                    red: 16/255.0
+                    , green: 107/255.0
+                    , blue: 20/255.0
+                    , alpha: 0.50
+                )
+            }
+            
+            //オーストラリア・オセアニア
+            if viewData[indexPath.row].no >= 1300 && viewData[indexPath.row].no < 1400{
+                cell.background?.backgroundColor = UIColor(
+                    red: 28/255.0
+                    , green: 193/255.0
+                    , blue: 34/255.0
+                    , alpha: 0.50
+                )
+            }
+            
             return cell
         }
-        //pNumberでスイッチ。Noを受け取り色分けする？^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-//        //表示したい文字の設定
-//        cell.textLabel?.text = viewData[indexPath.row].title
-//        cell.tag = viewData[indexPath.row].no
-//
-//        //文字を設定したセルを返す
-//        return cell
     }
     
     
@@ -121,7 +326,7 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
             //indexPathから読出ししたデータを取り出し
             let hotelDic = contentHotel[indexPath.row]
-//            let id = hotelDic["id"] as! Int16
+            //            let id = hotelDic["id"] as! Int16
             let id = viewData[indexPath.row].no
             
             let key:String = "\(id)"
@@ -160,10 +365,10 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
         }
         
-
+        
     }
     
-
+    
     
     /// close details.
     ///
@@ -292,10 +497,10 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         return changeNum
     }
-
     
-
-
+    
+    
+    
     func createData(){
         
         //TODO;リスト完成後再入力
@@ -304,8 +509,8 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         area.append((title: "アジア（北〜東〜東南アジア）",no:3    , details: [    700,    710,    800,    810,    820,    830], extended: false,category:1))
         area.append((title: "アジア（中央〜南〜西アジア）",no:4    , details: [    900,    1100,    1200], extended: false,category:1))
         //area.append((title: "アジア（予備）",no:5    , details: [], extended: false,category:1))
-        area.append((title: "アフリカ",no:6    , details: [    500,    510], extended: false,category:1))
-        area.append((title: "ヨーロッパ",no:7    , details: [    300,    310,    330,    340,    350,    360,    370,    380,    390,    400,    410,    420,    430], extended: false,category:1))
+        area.append((title: "ヨーロッパ",no:6    , details: [    300,    310,    330,    340,    350,    360,    370,    380,    390,    400,    410,    420,    430], extended: false,category:1))
+        area.append((title: "アフリカ",no:7    , details: [    500,    510], extended: false,category:1))
         area.append((title: "オーストラリア・オセアニア",no:8    , details: [    1300,    1310], extended: false,category:1))
         
         
@@ -354,12 +559,12 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         for (key,data) in hotelDetailDic! {
             keyList.append(key as! String)
-
+            
             let dic = hotelDetailDic![key]! as! NSDictionary
             let hotelNameDic = dic["hotelName"]! as! String
             let idDic = dic["id"]! as! Int
             //let idNum = Int(atof(idDic))
-
+            
             inn.append((
                 title: "\(hotelNameDic)"
                 , no: idDic
@@ -369,14 +574,14 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             ))
             
             contentHotel.append(dic as NSDictionary)
-        
+            
         }
         
         //最初はエリアだけを表示するためエリアのみを表示用の配列に保存しておく
         viewData = area
         
     }
-
+    
     
     
     //セグエを使って画面移動する時発動
@@ -387,7 +592,7 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         dvc.getKeyDic = selectHototelDetailDic
         
         print("②セグエを使って画面移動する時発動")
-
+        
     }
     
     
@@ -400,7 +605,7 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let dic = NSDictionary(contentsOfFile: path!)
         
         print("③plistの読み込み")
-
+        
         
         return dic![key] as? NSDictionary
     }

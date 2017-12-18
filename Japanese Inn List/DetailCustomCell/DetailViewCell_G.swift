@@ -40,7 +40,5 @@ class detailViewCell_G: UITableViewCell {
         } else {
             backgroundColor = UIColor.white
         }
-    }
-    
+    }    
 }
-
