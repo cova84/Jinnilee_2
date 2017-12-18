@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelegate{
+class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     
     //画面全体のScrollView
@@ -356,7 +356,7 @@ class DetailView:UIViewController{ //}, UITableViewDataSource, UITableViewDelega
 
     //TableViewの内容に合わせて、長さが伸びる。
     func setMyConstraint() {
-        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight + 2*10
+        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight //+ 2*10
         reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
     }
 
