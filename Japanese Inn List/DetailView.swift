@@ -15,7 +15,8 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     //画面全体のScrollView
     @IBOutlet weak var ditailScrollView: UIScrollView!
-
+    @IBOutlet weak var ditailScrollViewHeight: NSLayoutConstraint!
+    
     //toDitailセグエ用　plistの配列を保存するメンバ変数
     var getKeyDic = NSDictionary()
     //Favorite（内容を）格納する配列TabelViewを準備
@@ -49,6 +50,7 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     //お気に入り追加ボタンを押された時発動　-----------------------------------------------------------------------------
+    @IBOutlet weak var saveFavoritesView: UIView!
     @IBAction func saveFavorites(_ sender: UIButton) {
         print("お気に入りに保存されました")
 
@@ -356,11 +358,12 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     //TableViewの内容に合わせて、長さが伸びる。
     func setMyConstraint() {
-//        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight
-//        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight
+        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight - 70 + 20
         
-        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight //+ 2*10
-        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
+        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight
+        
+        ditailScrollViewHeight.constant = hotelName.frame.size.height + hotelComment.contentSize.height + hotelMap.frame.size.height + 8 + hotelAddress.frame.size.height + 8 + hotelImageScrollView.frame.size.height + 8 + saveFavoritesView.frame.size.height + 8 + detailedtableViewHeight.constant + 8 + reservationtableViewHeight.constant + 8 + 20
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
