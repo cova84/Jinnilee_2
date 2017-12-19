@@ -356,6 +356,9 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     //TableViewの内容に合わせて、長さが伸びる。
     func setMyConstraint() {
+//        detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight
+//        reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight
+        
         detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight //+ 2*10
         reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight + 2*8
     }
