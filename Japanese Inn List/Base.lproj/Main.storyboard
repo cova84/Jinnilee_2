@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -184,28 +185,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-W5-7ua">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1951"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Hare Kapone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="L5w-no-hGe">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Hare Kapone" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="L5w-no-hGe">
                                                 <rect key="frame" x="16" y="0.0" width="288" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Hxv-o7-RRU"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="＊各アイテム間のh隙間は8pt＊横の余白16pt ＊縦横比3:4(288*216)" translatesAutoresizingMaskIntoConstraints="NO" id="Wuz-L1-dnT">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="＊各アイテム間のh隙間は8pt＊横の余白16pt ＊縦横比3:4(288*216)" translatesAutoresizingMaskIntoConstraints="NO" id="Wuz-L1-dnT">
                                                 <rect key="frame" x="16" y="41" width="288" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-ZA-fi0">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-ZA-fi0">
                                                 <rect key="frame" x="16" y="90" width="288" height="204"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="B2m-ZA-fi0" secondAttribute="height" multiplier="24:17" id="wag-ah-Dx0"/>
+                                                </constraints>
                                             </scrollView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtZ-3Y-etB" userLabel="ViewButton">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtZ-3Y-etB" userLabel="ViewButton">
                                                 <rect key="frame" x="16" y="302" width="288" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-4s-ZJO">
                                                         <rect key="frame" x="24" y="7" width="240" height="36"/>
@@ -220,14 +223,18 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97254901959999995" green="0.19215686269999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="gyq-r7-cJ4"/>
+                                                </constraints>
                                             </view>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-b5-dSU">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-b5-dSU">
                                                 <rect key="frame" x="16" y="360" width="288" height="180"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Cvj-b5-dSU" secondAttribute="height" multiplier="8:5" id="h2N-OS-f9W"/>
+                                                </constraints>
                                             </mapView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tuki Haka Hevari, Hanga Roa, Easter Island, Chile" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-ug-duP">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Tuki Haka Hevari, Hanga Roa, Easter Island, Chile" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-ug-duP">
                                                 <rect key="frame" x="16" y="548" width="288" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
@@ -328,7 +335,31 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="epY-7h-TBJ" secondAttribute="trailing" constant="16" id="5is-pq-QIY"/>
+                                            <constraint firstAttribute="trailing" secondItem="L5w-no-hGe" secondAttribute="trailing" constant="16" id="BbU-SJ-QgH"/>
+                                            <constraint firstItem="9ua-eG-gsK" firstAttribute="top" secondItem="epY-7h-TBJ" secondAttribute="bottom" constant="8" id="DB8-3W-uPX"/>
+                                            <constraint firstAttribute="trailing" secondItem="9ua-eG-gsK" secondAttribute="trailing" constant="16" id="FWB-Y7-Yql"/>
+                                            <constraint firstItem="L5w-no-hGe" firstAttribute="top" secondItem="uTS-W5-7ua" secondAttribute="top" id="J2e-C2-vRN"/>
+                                            <constraint firstItem="Ndd-ug-duP" firstAttribute="top" secondItem="Cvj-b5-dSU" secondAttribute="bottom" constant="8" id="K1C-gF-yHm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wuz-L1-dnT" secondAttribute="trailing" constant="16" id="Luc-6B-Qtb"/>
+                                            <constraint firstAttribute="trailing" secondItem="xtZ-3Y-etB" secondAttribute="trailing" constant="16" id="OCb-KV-8M8"/>
+                                            <constraint firstItem="Cvj-b5-dSU" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="RTu-kk-eab"/>
+                                            <constraint firstItem="epY-7h-TBJ" firstAttribute="top" secondItem="Ndd-ug-duP" secondAttribute="bottom" constant="8" id="Uss-T3-Mte"/>
+                                            <constraint firstItem="xtZ-3Y-etB" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="XRz-a9-1tp"/>
+                                            <constraint firstAttribute="trailing" secondItem="B2m-ZA-fi0" secondAttribute="trailing" constant="16" id="YFv-Ch-XBR"/>
+                                            <constraint firstItem="B2m-ZA-fi0" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="YYW-HP-OES"/>
+                                            <constraint firstItem="xtZ-3Y-etB" firstAttribute="top" secondItem="B2m-ZA-fi0" secondAttribute="bottom" constant="8" id="YpQ-tP-2ke"/>
+                                            <constraint firstItem="B2m-ZA-fi0" firstAttribute="top" secondItem="Wuz-L1-dnT" secondAttribute="bottom" constant="1" id="bXb-ov-0tL"/>
+                                            <constraint firstItem="9ua-eG-gsK" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="ccq-bv-w1l"/>
+                                            <constraint firstItem="Ndd-ug-duP" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="cpq-Nn-YgQ"/>
+                                            <constraint firstItem="Cvj-b5-dSU" firstAttribute="top" secondItem="xtZ-3Y-etB" secondAttribute="bottom" constant="8" id="i3A-kK-Wuu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ndd-ug-duP" secondAttribute="trailing" constant="16" id="nDc-iY-Uyq"/>
                                             <constraint firstAttribute="height" constant="1951" id="nWx-tf-CLf"/>
+                                            <constraint firstItem="Wuz-L1-dnT" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="p5Q-9B-DL9"/>
+                                            <constraint firstItem="L5w-no-hGe" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="sCS-wS-DYZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cvj-b5-dSU" secondAttribute="trailing" constant="16" id="sZl-yZ-mfo"/>
+                                            <constraint firstItem="epY-7h-TBJ" firstAttribute="leading" secondItem="uTS-W5-7ua" secondAttribute="leading" constant="16" id="tsa-1v-WHp"/>
+                                            <constraint firstItem="Wuz-L1-dnT" firstAttribute="top" secondItem="L5w-no-hGe" secondAttribute="bottom" constant="1" id="x54-VX-X28"/>
                                         </constraints>
                                     </view>
                                 </subviews>
