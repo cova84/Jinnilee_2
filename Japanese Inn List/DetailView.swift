@@ -379,34 +379,27 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     }
 
-    //TableViewの内容に合わせて、長さが伸びる。
     func setMyConstraint() {
+        //TableViewの内容に合わせて、長さが伸びる。
         detailedtableViewHeight.constant = detailedInfoTableView.contentSize.height + detailedInfoTableView.sectionHeaderHeight + detailedInfoTableView.sectionFooterHeight - 70 + 20
         
         reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight
         
-        ditailScrollViewHeight.constant = hotelName.frame.size.height +  hotelCommentHeight.constant +  hotelImageScrollView.frame.size.height + 8 + detailedtableViewHeight.constant + 8 + hotelMap.frame.size.height + 8 + hotelAddressHeight.constant + 8 +  saveFavoritesView.frame.size.height + 8 +  reservationtableViewHeight.constant
+        //ditailScrollView内のViewを可変--------------------------------------------------------------------------------------------------
         
-        //----------------------------------------------------------------------
         //画面のワイド
         let gamenWidth = self.view.frame.size.width
         let imageScrollViewHeight = (gamenWidth - 16 - 16) / 1.4
         let mapHeight = (gamenWidth - 16 - 16) / 1.6
 
-//        ditailScrollViewHeight.constant = 40 + hotelCommentHeight.constant + imageScrollViewHeight + 8 + saveFavoritesViewHeight.constant + mapHeight + 8 + hotelAddressHeight.constant + 8 + detailedtableViewHeight.constant + 8 + reservationtableViewHeight.constant
-        //----------------------------------------------------------------------
+        ditailViewHeight.constant = 40 + hotelCommentHeight.constant + imageScrollViewHeight + 8 + saveFavoritesViewHeight.constant + mapHeight + 8 + hotelAddressHeight.constant + 8 + detailedtableViewHeight.constant + 8 + reservationtableViewHeight.constant
+        //        ditailScrollViewHeight.constant = hotelName.frame.size.height +  hotelCommentHeight.constant +  hotelImageScrollView.frame.size.height + 8 + detailedtableViewHeight.constant + 8 + hotelMap.frame.size.height + 8 + hotelAddressHeight.constant + 8 +  saveFavoritesView.frame.size.height + 8 +  reservationtableViewHeight.constant
+        ditailScrollViewHeight.constant = self.view.bounds.height
         
-        print("：：：：：：ditailScrollViewHeight--------\(ditailScrollViewHeight.constant)")
-        print("hotelName--------\(hotelName.frame.size.height)")
-        print("hotelCommentHeight--------\(hotelCommentHeight.constant)")
-        print("---hotelMap--------\(hotelMap.frame.size.height)")
-        print("---mapHeight--------\(mapHeight)")
-        print("hotelAddressHeight--------\(hotelAddressHeight.constant)")
-        print("---hotelImageScrollView--------\(hotelImageScrollView.frame.size.height)")
-        print("---imageScrollViewHeight---------------\(imageScrollViewHeight)")
-        print("saveFavoritesView--------\(saveFavoritesView.frame.size.height)")
-        print("detailedtableViewHeight--------\(detailedtableViewHeight.constant)")
-        print("reservationtableViewHeight--------\(reservationtableViewHeight.constant)")
+        print("：：：：：：ditailViewHeight--------\(ditailViewHeight.constant)")
+        print("Height:\(self.view.bounds.height)")
+        
+        //ditailScrollView内のViewを可変-------------------------------------------------------------------------------------------------
         
     }
 
