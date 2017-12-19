@@ -15,7 +15,10 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     //画面全体のScrollView
     @IBOutlet weak var ditailScrollView: UIScrollView!
-    @IBOutlet weak var ditailScrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var ditailScrollViewHeight1: NSLayoutConstraint!
+    
+//    @IBOutlet weak var ditailScrollViewHeight1: NSLayoutConstraint!   //view
+
     
     //toDitailセグエ用　plistの配列を保存するメンバ変数
     var getKeyDic = NSDictionary()
@@ -25,20 +28,24 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     var contentID:[NSDictionary] = []
 
     
-    
     //宿情報タイトル〜住所-----------------------------------------------------------------------------------------
     @IBOutlet weak var hotelName: UILabel!
     @IBOutlet weak var hotelComment: UITextView!
+    @IBOutlet weak var hotelCommentHeight: NSLayoutConstraint!
     @IBOutlet weak var hotelMap: MKMapView!
     @IBOutlet weak var hotelAddress: UITextView!
-
+    @IBOutlet weak var hotelAddressHeight: NSLayoutConstraint!
+    
+    
     ////詳細情報-------------------------------------------------------------------------------------------------
     @IBOutlet weak var detailedInfoTableView: UITableView!
     @IBOutlet weak var detailedtableViewHeight: NSLayoutConstraint!
     
+    
     ////予約方法--------------------------------------------------------------------------------------------------
     @IBOutlet weak var reservationTabelView: UITableView!
     @IBOutlet weak var reservationtableViewHeight: NSLayoutConstraint!
+    
     
     //UIScrollView 横スクロールで表示
     @IBOutlet weak var hotelImageScrollView: UIScrollView!
@@ -51,6 +58,7 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     //お気に入り追加ボタンを押された時発動　-----------------------------------------------------------------------------
     @IBOutlet weak var saveFavoritesView: UIView!
+    @IBOutlet weak var saveFavoritesViewHeight: NSLayoutConstraint!
     @IBAction func saveFavorites(_ sender: UIButton) {
         print("お気に入りに保存されました")
 
@@ -117,8 +125,16 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         hotelName.text = getKeyDic["hotelName"] as! String
         //紹介コメント
         hotelComment.text = getKeyDic["comment"] as! String
+        print("01----------\(hotelComment.frame.size.height)")
+
         hotelComment.sizeToFit()          // 文字数に合わせて縦に伸びます。
+        print("02--------------\(hotelComment.frame.size.height)")
+
         
+        hotelCommentHeight.constant = hotelComment.frame.size.height
+        print("03---------------------\(hotelCommentHeight.constant)")
+
+
 
 
         //画像スライドショー-----------------------------------------------------------------------------------------------
@@ -236,7 +252,14 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
 
         //住所--------------------------------------------------------------------
         hotelAddress.text = getKeyDic["address"] as! String
-        hotelAddress.sizeToFit() // 文字数に合わせて縦に伸びます。
+        print("01----------\(hotelAddress.frame.size.height)")
+        
+        // 文字数に合わせて縦に伸びます。
+        hotelAddress.sizeToFit()
+        print("02--------------\(hotelAddress.frame.size.height)")
+        
+        hotelAddressHeight.constant = hotelAddress.frame.size.height
+        print("03---------------------\(hotelAddressHeight.constant)")
     }
 
 
@@ -362,7 +385,38 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         reservationtableViewHeight.constant = reservationTabelView.contentSize.height + reservationTabelView.sectionHeaderHeight + reservationTabelView.sectionFooterHeight
         
-        ditailScrollViewHeight.constant = hotelName.frame.size.height + hotelComment.contentSize.height + hotelMap.frame.size.height + 8 + hotelAddress.frame.size.height + 8 + hotelImageScrollView.frame.size.height + 8 + saveFavoritesView.frame.size.height + 8 + detailedtableViewHeight.constant + 8 + reservationtableViewHeight.constant + 8 + 20
+        ditailScrollViewHeight1.constant = hotelName.frame.size.height +  hotelCommentHeight.constant +  hotelImageScrollView.frame.size.height + 8 + detailedtableViewHeight.constant + 8 + hotelMap.frame.size.height + 8 + hotelAddressHeight.constant + 8 +  saveFavoritesView.frame.size.height + 8 +  reservationtableViewHeight.constant
+        
+        //----------------------------------------------------------------------
+        //画面のワイド
+        let gamenWidth = self.view.frame.size.width
+        let imageScrollViewHeight = (gamenWidth - 16 - 16) / 1.4
+        let mapHeight = (gamenWidth - 16 - 16) / 1.6
+
+//        ditailScrollViewHeight1.constant = 40 + hotelCommentHeight.constant + imageScrollViewHeight + 8 + saveFavoritesViewHeight.constant + mapHeight + 8 + hotelAddressHeight.constant + 8 + detailedtableViewHeight.constant + 8 + reservationtableViewHeight.constant
+        //----------------------------------------------------------------------
+        
+        print("ditailScrollViewHeight1--------\(ditailScrollViewHeight1.constant)")
+        
+        print("hotelName--------\(hotelName.frame.size.height)")
+        
+        print("hotelCommentHeight--------\(hotelCommentHeight.constant)")
+        
+        print("---hotelMap--------\(hotelMap.frame.size.height)")
+        print("---mapHeight--------\(mapHeight)")
+        
+        print("hotelAddressHeight--------\(hotelAddressHeight.constant)")
+
+        print("---hotelImageScrollView--------\(hotelImageScrollView.frame.size.height)")
+        print("---imageScrollViewHeight---------------\(imageScrollViewHeight)")
+        
+        print("saveFavoritesView--------\(saveFavoritesView.frame.size.height)")
+        
+        print("detailedtableViewHeight--------\(detailedtableViewHeight.constant)")
+        
+        print("reservationtableViewHeight--------\(reservationtableViewHeight.constant)")
+
+
         
     }
 
