@@ -71,8 +71,6 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     
-    //TODO:本当は、削除設定カスタムセルにボタンをつけたい---------------------------------------------------
-    
     @IBAction func tapAllDelete(_ sender: UIButton) {
         
         //部品となるアラート作成

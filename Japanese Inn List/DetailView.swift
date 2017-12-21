@@ -266,7 +266,7 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView.tag {
         case 1:
-            return 10
+            return 8
         default:
             return 8
         }
@@ -294,30 +294,21 @@ class DetailView:UIViewController, UITableViewDataSource, UITableViewDelegate{
                 return cellW
             case 2:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-                cellW.varticalLabel.text = "部屋数"
-                cellW.selectedBackgroundView?.backgroundColor = UIColor.blue
+                cellW.varticalLabel.text = "Wi-Fi"
                 return cellW
             case 3:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-                cellW.varticalLabel.text = "全\(getKeyDic["rooms"] as! String)部屋"
+                cellW.varticalLabel.text = getKeyDic["wifi"] as! String
                 return cellW
             case 4:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-                cellW.varticalLabel.text = "Wi-Fi"
+                cellW.varticalLabel.text = "送迎"
                 return cellW
             case 5:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
-                cellW.varticalLabel.text = getKeyDic["wifi"] as! String
-                return cellW
-            case 6:
-                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
-                cellW.varticalLabel.text = "送迎"
-                return cellW
-            case 7:
-                let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_W", for: indexPath) as! detailViewCell_W
                 cellW.varticalLabel.text = getKeyDic["pickup"] as! String
                 return cellW
-            case 8:
+            case 6:
                 let cellW = tableView.dequeueReusableCell(withIdentifier: "CellTB_D_G", for: indexPath) as! detailViewCell_G
                 cellW.varticalLabel.text = "施設設備"
                 return cellW

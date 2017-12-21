@@ -42,7 +42,6 @@
 		D1D48CB11FE6448A008737FF /* AreaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D48CAD1FE64489008737FF /* AreaCustomCell.xib */; };
 		D1D78CD21FE5938100E7E58A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D78CD11FE5938100E7E58A /* MessageUI.framework */; };
 		D1FE761C1FC7C471000786C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FE761B1FC7C471000786C3 /* LaunchScreen.storyboard */; };
-		D1FEAD321FCA978600E25738 /* hotel_list_Top.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1FEAD311FCA978600E25738 /* hotel_list_Top.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +116,6 @@
 		D1D48CAD1FE64489008737FF /* AreaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaCustomCell.xib; sourceTree = "<group>"; };
 		D1D78CD11FE5938100E7E58A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D1FE761B1FC7C471000786C3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D1FEAD311FCA978600E25738 /* hotel_list_Top.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotel_list_Top.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +182,6 @@
 				D1D23C341FBCB426009D3895 /* Assets.xcassets */,
 				D13C3BC11FE0C6A500A76A75 /* infoLink.jpg */,
 				D1D23C391FBCB426009D3895 /* Info.plist */,
-				D1FEAD311FCA978600E25738 /* hotel_list_Top.plist */,
 				D19AEF871FC731840080ACC0 /* hotel_list_Detail.plist */,
 				D18F48531FC4722200535881 /* favoriteCoreData.xcdatamodeld */,
 			);
@@ -379,7 +376,6 @@
 				D15A4EB01FE670EB00651282 /* CountryCustomCell.xib in Resources */,
 				D1159E011FE3537B00530826 /* DetailViewCell_W.xib in Resources */,
 				D19AEF881FC731840080ACC0 /* hotel_list_Detail.plist in Resources */,
-				D1FEAD321FCA978600E25738 /* hotel_list_Top.plist in Resources */,
 				D1D23C351FBCB426009D3895 /* Assets.xcassets in Resources */,
 				D1FE761C1FC7C471000786C3 /* LaunchScreen.storyboard in Resources */,
 				D11709101FBE997500F4B3E4 /* Main.storyboard in Resources */,

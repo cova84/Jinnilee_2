@@ -29,9 +29,9 @@ class mailCell_W: UITableViewCell, MFMailComposeViewControllerDelegate {
     super.awakeFromNib()
         //Viewの背景、囲い線-----------------------------------------
         background?.backgroundColor = UIColor(
-              red: 248/255.0
-            , green: 248/255.0
-            , blue: 248/255.0
+              red: 246/255.0
+            , green: 246/255.0
+            , blue: 246/255.0
             , alpha: 1.0
         )
     }

@@ -32,12 +32,9 @@ class SecondViewController: UIViewController,MKMapViewDelegate {
         
         //はじめの世界地図表示----------------------------------------------------------------------------
         // 1.中心となる場所の座標オブジェクトを作成
-        //東京タワー(35.658581,139.745433)
-        //TODO: テスト後解除　let coodineate = CLLocationCoordinate2DMake(35.658581,139.745433)
-        let coodineate = CLLocationCoordinate2DMake(21.648352,-158.061442)  //ハワイ
-        
+        let coodineate = CLLocationCoordinate2DMake(35.658581,139.745433)
         // 2.縮尺を設定    (0.1, 0.1)で縮尺を指示(1, 1)が国全体
-        let span = MKCoordinateSpanMake(50, 50)
+        let span = MKCoordinateSpanMake(100, 100)
         // 3.範囲オブジェクトを作成
         let region = MKCoordinateRegionMake(coodineate, span)
         // 4.MapViewに範囲オブジェクトを設定
